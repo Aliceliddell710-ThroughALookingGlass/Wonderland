@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Discover your perfect adventure with the Ice King Quiz!">
+  <title>ICE KING QUIZ - Adventure Picker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+  <div id="penguin" class="penguin-emoji">🐧</div>
+  <h1>ICE KING QUIZ</h1>
+  <p id="talk" class="ice-king-talk">"Answer correctly or... whatever."</p>
+
+  <div id="quiz" class="quiz-section">
+    <!-- Vibe Selection -->
+    <div class="card">
+      <label for="vibe">What's your vibe?</label>
+      <select id="vibe" onchange="react()">
+        <option value="">-- Select --</option>
+        <option value="chill">Chill</option>
+        <option value="balanced">Balanced</option>
+        <option value="chaos">MAX CHAOS</option>
+      </select>
+    </div>
+
+    <!-- Travel Style -->
+    <div class="card">
+      <label for="type">Travel style?</label>
+      <select id="type" onchange="react()">
+        <option value="">-- Select --</option>
+        <option value="roadtrip">Road trip</option>
+        <option value="stay">Stay put</option>
+        <option value="mix">Mix it up</option>
+      </select>
+    </div>
+
+    <!-- Activity Interests -->
+    <div class="card">
+      <label>What interests you? (Check all that apply)</label>
+      <div class="checkbox-group">
+        <label><input type="checkbox" class="activity" value="beach" onchange="react()"> 🏖️ Beach</label>
+        <label><input type="checkbox" class="activity" value="rides" onchange="react()"> 🎢 Rides</label>
+        <label><input type="checkbox" class="activity" value="nature" onchange="react()"> 🌲 Nature</label>
+        <label><input type="checkbox" class="activity" value="spa" onchange="react()"> 🧖 Spa</label>
+        <label><input type="checkbox" class="activity" value="food" onchange="react()"> 🍕 Food</label>
+        <label><input type="checkbox" class="activity" value="culture" onchange="react()"> 🎭 Culture</label>
+      </div>
+    </div>
+
+    <!-- Must-Haves -->
+    <div class="card">
+      <label for="must">Top 3 things you need on a trip:</label>
+      <textarea id="must" placeholder="e.g., WiFi, Good food, Adventure..."></textarea>
+    </div>
+
+    <!-- Budget -->
+    <div class="card">
+      <label for="budget">Budget range?</label>
+      <select id="budget" onchange="react()">
+        <option value="">-- Select --</option>
+        <option value="budget">Budget ($)</option>
+        <option value="moderate">Moderate ($$)</option>
+        <option value="luxury">Luxury ($$$)</option>
+      </select>
+    </div>
+
+    <button class="submit-btn" onclick="go()">SUMMON TRIPS</button>
+  </div>
+
+  <!-- Results Section -->
+  <div id="results" class="results-section hidden">
+    <h2>Pick Your Destiny</h2>
+    <p>Rank these trips from 1st to 3rd choice:</p>
+    <div id="list" class="trips-list"></div>
+    <button class="submit-btn" onclick="send()">SEND MY RANKINGS</button>
+    <button class="reset-btn" onclick="reset()">START OVER</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
