@@ -76,4 +76,4 @@ This project is ready to be deployed on GitHub Pages!
 
 ---
 
-Made with ❄️ by Alice | *"Even Gunter approves"* 🐧
+Made with ❄️ by Alice | *"Even Gunter approves"* 
